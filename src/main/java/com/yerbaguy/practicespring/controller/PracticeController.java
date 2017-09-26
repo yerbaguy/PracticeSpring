@@ -45,13 +45,13 @@ public class PracticeController  {
 		//model.addObject("msg", "lkajsdflkjasd");
 		
 		//return "welcome";
-		return new ModelAndView("welcome", "asdfasd", new SayHallo());
+		return new ModelAndView("welcome", "command", new SayHallo());
 	}
 	
 	
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
-	public String yesHalloWorld(@ModelAttribute("SayHallo") SayHallo sayHallo, ModelMap model) {
+	public String yesHalloWorld(@ModelAttribute("SpringWeb") SayHallo sayHallo, ModelMap model) {
 		
 		
 		
@@ -59,7 +59,7 @@ public class PracticeController  {
 		sayHallo.setHallo("lkjasdf");
 		String message = sayHallo.getHallo();
 		
-		System.out.println(message);
+		System.out.println("Message:" + message);
 		
 		//String message = "lkjasdf";
 		
@@ -67,7 +67,7 @@ public class PracticeController  {
 		
 		//map.put("message", sayHallo.getHallo());
 		
-		model.addAttribute("asdfasdf", sayHallo.getHallo());
+		model.addAttribute("hallo", sayHallo.getHallo());
 		
 		//ModelAndView mav = new ModelAndView("welcome");
 		
