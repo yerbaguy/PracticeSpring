@@ -5,11 +5,11 @@ public class SayHallo {
 	private String hallo;
 	
 	
-	public void setHallo(String hallo) {
+	public void setMessage(String hallo) {
 		this.hallo = hallo;
 	}
 	
-	public String getHallo() {
+	public String getMessage() {
 		return this.hallo;
 	}
 

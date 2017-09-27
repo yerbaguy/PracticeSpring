@@ -7,7 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-${hallo }
+
+${message }
+
+
+<c:out value="${message }" />
 
 </body>
 </html>
