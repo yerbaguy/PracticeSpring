@@ -8,10 +8,10 @@
 </head>
 <body>
 
-${message }
+${msg }
 
 
-<c:out value="${message }" />
+<c:out value="${msg }" />
 
 </body>
 </html>

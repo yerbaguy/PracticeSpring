@@ -14,7 +14,7 @@ import com.yerbaguy.practicespring.model.SayHallo;
 public class PracticeHalloWorld {
 	
 	@RequestMapping("/welcome")
-	public String helloWorld(Model model) {
+	public ModelAndView helloWorld(Model model) {
 	 
 //	String message = "<br><div style='text-align:center;'>"
 //	+ "<h3>********** Hello World, Spring MVC Tutorial</h3>This message is coming from CrunchifyHelloWorld.java **********</div><br><br>";
@@ -27,8 +27,10 @@ public class PracticeHalloWorld {
 //		sayHallo.setMessage("lkjasdf");
 		
 		
-//		ModelAndView mav = new ModelAndView("welcome");
+		ModelAndView mav = new ModelAndView("welcome");
 //		mav.addObject("message", sayHallo);
+		
+		mav.addObject("msg", "test");
 		
 //		mav.setViewName("welcome");
 		
@@ -40,7 +42,9 @@ public class PracticeHalloWorld {
 		
 		//model.addAttribute("message", message);
 		
-		return "welcome";
+	//	return "welcome";
+		
+		return mav;
 		
 	//	return mav;
 		
